@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0"
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match="/">
+<html>
+  <body style="font-family:Arial;font-size:12pt;background-color:#333">
+    
+
+    <xsl:for-each select="CHRIST/CS">
+      <h3 style="color:white;"> Name<xsl:value-of select="STU-NAME"/></h3>
+      <h3 style="color:white;"> Branch <xsl:value-of select="STU-BRANCH"/></h3>
+      <h3 style="color:white;"> College Name<xsl:value-of select="STU-COLLEGE"/></h3>
+      <h3 style="color:white;">Email:<xsl:value-of select="STU-EMAIL"/></h3>
+      <button style="padding:5px; font-weight:100; color:#000; border-radius:10px; background:white; margin:5px;"><xsl:value-of select="AddButton"/></button>
+      </xsl:for-each>
+
+    
+  </body>
+</html>
+</xsl:template>
+</xsl:stylesheet>
+ file.xsl
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="college.xsl"?>
+<!DOCTYPE CHRIST SYSTEM "college.dtd">
+<CHRIST>
+<CS>
+    <STU-NAME>Abhay Tomar</STU-NAME>
+    <STU-BRANCH>Computer Science</STU-BRANCH>
+    <STU-COLLEGE>Christ University</STU-COLLEGE>
+    <STU-EMAIL>abhay.tomar@cs.christuniversity.in</STU-EMAIL>
+    <AddButton>Add details now</AddButton>
+</CS>
+
+<CS>
+    <STU-NAME>Karunya Challa</STU-NAME>
+    <STU-BRANCH>Data Science</STU-BRANCH>
+    <STU-COLLEGE>Christ University</STU-COLLEGE>
+    <STU-EMAIL>karunya@mds.christuniversity.in</STU-EMAIL>
+    <AddButton>Add details now</AddButton>
+</CS>
+
+
+
+<CS>
+    <STU-NAME>Aditya Dhar</STU-NAME>
+    <STU-BRANCH>Computer Application</STU-BRANCH>
+    <STU-COLLEGE>Christ University</STU-COLLEGE>
+    <STU-EMAIL>aditya.dhar@mca.christuniversity.in</STU-EMAIL>
+    <AddButton>Add details now</AddButton>
+</CS>
+
+<CS>
+    <STU-NAME>Riya Gurbani</STU-NAME>
+    <STU-BRANCH>Computer Application</STU-BRANCH>
+    <STU-COLLEGE>Christ University</STU-COLLEGE>
+    <STU-EMAIL>riya@5mca.christuniversity.in</STU-EMAIL>
+    <AddButton>Add details now</AddButton>
+</CS>
+
+</CHRIST> file.xml
